@@ -1,0 +1,310 @@
+ /* NORMALIZE CSS */
+ html {line-height: 1.15;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {display: block;}h1 {font-size: 2em;margin: 0.67em 0;}hr {box-sizing: content-box;height: 0;overflow: visible;}pre {font-family: monospace, monospace;font-size: 1em;}a {background-color: transparent;}abbr[title] {border-bottom: none;text-decoration: underline;text-decoration: underline dotted;}b, strong {font-weight: bolder;}code, kbd, samp {font-family: monospace, monospace;font-size: 1em;}small {font-size: 80%;}sub, sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}sub {bottom: -0.25em;}sup {top: -0.5em;}img {border-style: none;}button, input, optgroup, select, textarea {font-family: inherit;font-size: 100%;line-height: 1.15;margin: 0;}button, input {overflow: visible;}button, select {text-transform: none;}button, [type="button"], [type="reset"], [type="submit"] {-webkit-appearance: button;}button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {border-style: none;padding: 0;}button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {outline: 1px dotted ButtonText;}fieldset {padding: 0.35em 0.75em 0.625em;}legend {box-sizing: border-box;color: inherit;display: table;max-width: 100%;padding: 0;white-space: normal;}progress {vertical-align: baseline;}textarea {overflow: auto;}[type="checkbox"], [type="radio"] {box-sizing: border-box;padding: 0;}[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {height: auto;}[type="search"] {-webkit-appearance: textfield;outline-offset: -2px;}[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}::-webkit-file-upload-button {-webkit-appearance: button;font: inherit;}details {display: block;}summary {display: list-item;}template {display: none;}[hidden] {display: none;}
+ 
+ /* IMPORT POPPINS FONT */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+ 
+/* ENABLE SLOW SCROLLING */
+html {
+	 scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+ 
+/* Remove all spacing from these tags */
+html, body, h1, p, li {
+	 margin: 0;
+	 padding: 0;
+}
+
+h1 {
+	max-width: 400px;
+	padding: 50px 0;
+}
+
+.main-container {
+	max-width: 1250px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.hamburger-container {
+	padding-top: 20px;
+	width: 70px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.horizontal {
+	display: block;
+	width: 70px;
+	height: 5px;
+	background-color: #fff;
+}
+
+#line-one {
+	transform: rotate(0deg);
+	margin-bottom: 10px;
+}
+
+#line-two {
+	transform: rotate(0deg);
+}
+
+#line-three {
+	transform: rotate(0deg);
+	margin-top: 10px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 15px 0;
+	text-align: center;
+}
+
+header ul li {
+	padding: 5px 0;
+}
+
+header ul a {
+	color: #fff;
+	text-decoration: none;
+}
+
+header ul li:hover {
+	cursor: pointer;
+	background-color: #000;
+}
+ 
+ body, h1 {
+	 font-family: Poppins;
+ }
+ 
+ /* HEADER FONT COLORS WILL BE WHITE */
+ header {
+	 color: #fff;
+	 padding: 15px;
+	 box-sizing: border-box;
+	 padding: 50px 50px 150px;
+ }
+ 
+.button {
+	background-color: #ebdaca;
+	color: #000;
+	font-weight: bold;
+	border-radius: 5px;
+	font-size: 16px;
+	width: 175px;
+	padding: 10px 2.5px;
+	margin: 15px 0;
+	text-align: center;
+}
+
+.center-button {
+	margin: 0 auto;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+.img-4-container {
+	
+	max-width: 1000px;
+	margin: 0 auto;
+	
+}
+
+#section-4 {
+	background: linear-gradient(#fff,#fff, #C6C6C6);
+}
+
+#section-5 {
+	background-color: #000;
+}
+
+#section-5 .button {
+	margin: 55px auto;
+	
+}
+
+.main-section-container {
+	text-align: center;
+	max-width: 500px;
+	margin: 0 auto;
+	
+	color: #fff;
+}
+
+.main-section-container h1 {
+	max-width: 100%;
+	
+}
+ 
+ /* ***** ***** ***** *****
+	MOBILE STYLES FOR DIVS 
+***** ***** ***** ***** */
+ 
+ header {
+	 background-image: url('images/hero.jpg');
+	 background-repeat: no-repeat;
+	 background-size: 300%;
+	 
+ }
+ 
+ #navigation-bar {
+	 display: none;
+ }
+ 
+ .main-nav {
+	 display: none;
+ }
+ 
+ .logo-container {
+	 width: 15%;
+	 min-width: 80px;
+	 margin: 0 auto;
+	 padding-top: 15px;
+ }
+ 
+ .logo {
+	 width: 100%;
+ }
+ 
+ .modal {
+	 width: 100%;
+	 box-sizing: border-box;
+	 box-shadow: 5px 5px 15px #000;
+	 background-color: #efefef;
+	 padding: 50px;
+	 position: absolute;
+	 top:0;
+	 left:0;
+	 display: none;
+ }
+ 
+ .section {
+	 box-sizing: border-box;
+	 padding: 50px;
+ }
+ 
+ .col h1 {
+	 padding: 25px 0;
+	 max-width: 100%;
+ }
+ 
+ .col h2 {
+	 margin: 0;
+	 padding: 0;
+	 background: -webkit-linear-gradient(45deg, #B0A37F, #D4C398);
+	 -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ 
+ .col img {
+	 width: 100%;
+ }
+ 
+ .hideThis2 {
+	 display: none;
+ }
+ 
+ .hideThis3 {
+	 display: none;
+ }
+ 
+ #section-2 {
+		background-color: #E0E0E0;
+	}
+	
+ form p {
+	 font-weight: bold;
+	 margin: 25px 0 5px;
+ }
+ 
+ form .submit p {
+	 margin: 0;
+ }
+ 
+ form .privacy-policy {
+	 font-size: 12px;
+	 
+ }
+ 
+ form a {
+	 color: #D4C398;
+	 text-decoration: underline;
+ }
+ 
+ form input, form select {
+	 box-sizing: border-box;
+	 border-radius: 5px;
+	 padding: 5px 10px;
+	 width: 100%;
+ }
+ 
+ .required {
+	 color: red;
+ }
+ 
+/* 
+	ABOVE 800PX WILL INHERIT THESE STYLES
+*/
+ @media only screen and (min-width: 800px) {
+	 
+	.main-container {
+		box-shadow: 5px 5px 15px #000;
+	}
+	
+	header {
+		background-size: cover;
+	}
+	 
+	.main-nav {
+		display: inline-block;
+		width: 28%;
+		vertical-align:top;
+	}
+	
+	.main-nav div a li {
+		display: inline-block;
+		width: 30%;
+	}
+	
+	.logo-container {
+		width: 40%;
+		display: inline-block;
+	}
+	
+	.logo-container-2 {
+		max-width: 150px;
+		margin: 0 auto;
+	}
+	
+	.show-menu {
+		display: none;
+	}
+	
+	/* SECTION-1 STYLES */
+	.col {
+		display: inline-block;
+		width: 48%;
+		box-sizing: border-box;
+		padding: 15px;
+		vertical-align: top;
+	}
+	
+	.hideThis {
+		display: none;
+	}
+	
+	.hideThis3 {
+		
+		display: block;
+	}
+	
+	
+}
