@@ -150,19 +150,21 @@
 					<form>
 						<div class="col">
 							<p>First Name<span class="required">*</span></p>
-							<input type="text" name="firstname" placeholder="Dustin" required>
+							<input type="text" name="firstname" id="first_name" placeholder="Dustin" required>
 							
 							<p>Email<span class="required">*</span></p>
-							<input type="text" name="email" placeholder="test@test.com" required>
+							<input type="text" name="email" id="email" placeholder="test@test.com" required>
 							
 							<p>Practice Name<span class="required">*</span></p>
-							<input type="text" name="PracticeName" placeholder="spiderman practice" required>
+							<input type="text" name="PracticeName" id="practice_name" placeholder="spiderman practice" required>
 							
 							<p>Practice Type<span class="required">*</span></p>
-							<select>
+							<select id="practice_type">
 								<option value="Option">Option</option>
 								<option value="Other">Other</option>
 							</select>
+							
+							<input type="hidden" id="practice_type_other" placeholder="Please specify your practice" style="margin-top: 10px;">
 							
 							<p class="privacy-policy hideThis3">By providing your information on this form and submitting it you are consenting 
 							to receive marketing communications about products and services and if you have 
@@ -171,16 +173,16 @@
 						</div>
 						<div class="col">
 							<p>Last Name</p>
-							<input type="text" name="lastname" placeholder="Medrano">
+							<input type="text" name="lastname" id="last_name" placeholder="Medrano">
 							
 							<p>Office Phone Number</p>
-							<input type="text" name="Office_Phone_Number" placeholder="1112223333">
+							<input type="text" name="Office_Phone_Number" id="office_phone_number" placeholder="1112223333">
 							
 							<p>Practice Zip Code<span class="required">*</span></p>
-							<input type="text" name="Practice_Zip_Code" placeholder="12345">
+							<input type="text" name="Practice_Zip_Code" id="practice_zip_code" placeholder="12345">
 							
 							<p>Referred By</p>
-							<input type="text" name="Referred_By" placeholder="Dustin Medrano">
+							<input type="text" name="Referred_By" id="referred_by" placeholder="Dustin Medrano">
 							
 							<div class="button submit">
 								<p>SUBMIT</p>
@@ -286,6 +288,7 @@
 		<!-- INTERNAL JQUERY ANIMATION -->
 		<script>
 			var menuCode = 0;
+			var selectCode = 0;
 			/* Navigation Hamburger Menu for mobile */
 			$('.show-menu').click(function() {
 				if( menuCode === 0 ) {
@@ -318,6 +321,21 @@
 				
 			});
 			
+			$(".submit").click(function(){
+				var fname = document.getElementById('first_name').value;
+				var lname = document.getElementById('last_name').value;
+				var email = document.getElementById('email').value;
+				var practiceName = document.getElementById('practice_name').value;
+				var practice_type = document.getElementById('practice_type').value;
+				var practice_type_other = document.getElementById('practice_type_other').value;
+				
+				var last_name = document.getElementById('last_name').value;
+				var office_phone_number = document.getElementById('office_phone_number').value;
+				var practice_zip_code = document.getElementById('practice_zip_code').value;
+				var referred_by = document.getElementById('referred_by').value;
+			});
+
+			
 			$('.end-now').click(function() {
 				$('#video').remove();
 				$('.modal').css('display', 'none');
@@ -326,6 +344,16 @@
 				}
 			});
 			
+			$('#practice_type').change(function() {
+				if(selectCode === 0 ) {
+					$('#practice_type_other').attr('type', 'text');
+					selectCode++;
+				} else {
+					$('#practice_type_other').attr('type', 'hidden');
+					selectCode--;
+				}
+				
+			});
 			
 		</script>
 	</body>

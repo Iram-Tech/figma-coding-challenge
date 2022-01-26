@@ -72,12 +72,7 @@ header ul li {
 
 header ul a {
 	color: #fff;
-	text-decoration: none;
-}
-
-header ul li:hover {
-	cursor: pointer;
-	background-color: #000;
+	
 }
  
  body, h1 {
@@ -86,6 +81,7 @@ header ul li:hover {
  
  h1 {
 	 font-family: 'Times New Roman';
+	 font-size: 40px;
  }
  
  /* HEADER FONT COLORS WILL BE WHITE */
@@ -171,6 +167,7 @@ header ul li:hover {
 	 padding: 5px 10px;
 	 width: 100%;
 	 background-color: #fff;
+	 height: 32px;
  }
  
  /* ***** ***** ***** *****
@@ -182,6 +179,10 @@ header ul li:hover {
 	 background-repeat: no-repeat;
 	 background-size: 300%;
 	 
+ }
+ 
+ header ul li:hover {
+	 text-decoration: underline;
  }
  
  #navigation-bar {
@@ -317,14 +318,25 @@ header ul li:hover {
 		width: 30%;
 	}
 	
+	.left-hand-navigation {
+		text-align: left;
+	}
+	
+	.right-hand-navigation {
+		text-align: right;
+	}
+	
 	.logo-container {
 		width: 40%;
 		display: inline-block;
 	}
 	
+	header .logo-container-2 {
+		margin: 0 auto;
+	}
+	
 	.logo-container-2 {
 		max-width: 150px;
-		margin: 0 auto;
 	}
 	
 	.show-menu {
@@ -338,6 +350,15 @@ header ul li:hover {
 		box-sizing: border-box;
 		padding: 15px;
 		vertical-align: top;
+	}
+	
+	#section-2 .col-1, 
+	#section-3 .col-1 {
+		padding-top: 10%;
+	}
+	
+	.main-section-container h1 {
+		font-size: 70px;
 	}
 	
 	.hideThis {
