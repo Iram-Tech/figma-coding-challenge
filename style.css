@@ -11,6 +11,7 @@ html {
 
 a {
 	text-decoration: none;
+	color: #000;
 }
  
 /* Remove all spacing from these tags */
@@ -25,7 +26,7 @@ h1 {
 }
 
 .main-container {
-	max-width: 1250px;
+	max-width: 100%;
 	margin: 0 auto;
 	position: relative;
 }
@@ -81,6 +82,10 @@ header ul li:hover {
  
  body, h1 {
 	 font-family: Poppins;
+ }
+ 
+ h1 {
+	 font-family: 'Times New Roman';
  }
  
  /* HEADER FONT COLORS WILL BE WHITE */
@@ -143,13 +148,28 @@ header ul li:hover {
 	max-width: 100%;
 	
 }
+
+.footer {
+	vertical-align: top;
+	color: #fff;
+	text-align: center;
+}
+
+.footer p {
+	margin-bottom: 10px;
+}
+
+.footer-logo-container {
+	max-width: 150px;
+	margin: 0 auto;
+}
  
  /* ***** ***** ***** *****
 	MOBILE STYLES FOR DIVS 
 ***** ***** ***** ***** */
  
  header {
-	 background-image: url('images/hero.jpg');
+	 background-image: url('images/hero.png');
 	 background-repeat: no-repeat;
 	 background-size: 300%;
 	 
@@ -241,6 +261,7 @@ header ul li:hover {
  
  form input, form select {
 	 box-sizing: border-box;
+	 border: 1px solid #000;
 	 border-radius: 5px;
 	 padding: 5px 10px;
 	 width: 100%;
@@ -254,10 +275,6 @@ header ul li:hover {
 	ABOVE 800PX WILL INHERIT THESE STYLES
 */
  @media only screen and (min-width: 800px) {
-	 
-	.main-container {
-		box-shadow: 5px 5px 15px #000;
-	}
 	
 	header {
 		background-size: cover;
@@ -306,5 +323,28 @@ header ul li:hover {
 		display: block;
 	}
 	
+	.footer {
+		display: inline-block;
+		width: 18%;
+	}
 	
+	.footer a {
+		color: #fff;
+	}
+	
+	.footer a:hover {
+		text-decoration: underline;
+	}
+	
+	.footer h3 {
+		margin-top: 0;
+	}
+	
+	.footer-logo-container {
+		display: inline-block;
+		max-width: 100%;
+		width: 30%;
+		
+	
+	}
 }
