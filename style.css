@@ -163,6 +163,15 @@ header ul li:hover {
 	max-width: 150px;
 	margin: 0 auto;
 }
+
+ form input, form select {
+	 box-sizing: border-box;
+	 border: 1px solid #000;
+	 border-radius: 5px;
+	 padding: 5px 10px;
+	 width: 100%;
+	 background-color: #fff;
+ }
  
  /* ***** ***** ***** *****
 	MOBILE STYLES FOR DIVS 
@@ -259,18 +268,35 @@ header ul li:hover {
 	 text-decoration: underline;
  }
  
- form input, form select {
-	 box-sizing: border-box;
-	 border: 1px solid #000;
-	 border-radius: 5px;
-	 padding: 5px 10px;
-	 width: 100%;
- }
- 
  .required {
 	 color: red;
  }
  
+ #section-7 {
+	 color: #fff;
+ }
+ 
+ .footer a {
+	 color: #fff;
+ }
+ 
+ .social-icon {
+	 max-width: 40px;
+	 display: inline-block;
+	 margin-left: auto;
+ }
+ 
+ .social-icon img {
+	 width: 100%;
+ }
+ 
+ #section-7 col p {
+		display: inline-block;
+	}
+ 
+ #section-8 {
+	 color: #fff;
+ }
 /* 
 	ABOVE 800PX WILL INHERIT THESE STYLES
 */
@@ -326,6 +352,7 @@ header ul li:hover {
 	.footer {
 		display: inline-block;
 		width: 18%;
+		text-align: left;
 	}
 	
 	.footer a {
@@ -344,7 +371,9 @@ header ul li:hover {
 		display: inline-block;
 		max-width: 100%;
 		width: 30%;
-		
+	}
 	
+	.social-icons {
+		text-align: right;
 	}
 }
