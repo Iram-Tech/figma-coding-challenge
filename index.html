@@ -136,7 +136,7 @@
 			</div>
 			
 			<div id="section-3" class="section">
-				<div class="col-1 col">
+				<div class="col-1 col formContent">
 					<h2>Request A Sample</h2>
 					<h1>Lorem ipsum dolor sit amet, consectetur adipicing elit</h1>
 					
@@ -146,25 +146,30 @@
 					eros et fermentum lacinia ex. Phasellus et porta odio</p>
 				</div>
 				
-				<div class="col-2 col">
+				<div class="col-1 col tyContent">
+					<h2>REQUEST A DEMO</h2>
+					<h1>THANK YOU</h1>
+				</div>
+				
+				<div class="col-2 col formContent">
 					<form>
 						<div class="col">
-							<p>First Name<span class="required">*</span></p>
-							<input type="text" name="firstname" id="first_name" placeholder="" required>
+							<p>First Name<span class="required"> <span class="requiredMessage">Required</span> *</span></p>
+							<input type="text" name="firstname" id="first_name" placeholder="" class="required_input" tabindex="1" required>
 							
-							<p>Email<span class="required">*</span></p>
-							<input type="text" name="email" id="email" placeholder="" required>
+							<p>Email<span class="required"> <span class="requiredMessage">Required</span> *</span></p>
+							<input type="text" name="email" id="email" placeholder="" class="required_input" tabindex="3" required>
 							
-							<p>Practice Name<span class="required">*</span></p>
-							<input type="text" name="PracticeName" id="practice_name" placeholder="" required>
+							<p>Practice Name<span class="required"> <span class="requiredMessage">Required</span> *</span></p>
+							<input type="text" name="PracticeName" id="practice_name" class="required_input" placeholder="" tabindex="5" required>
 							
-							<p>Practice Type<span class="required">*</span></p>
-							<select id="practice_type">
+							<p>Practice Type<span class="required"> <span class="requiredMessage">Required</span> *</span></p>
+							<select id="practice_type" tabindex="7" class="required_input">
 								<option value="Option">Option</option>
 								<option value="Other">Other</option>
 							</select>
 							
-							<input type="hidden" id="practice_type_other" placeholder="" style="margin-top: 10px;">
+							<input type="hidden" id="practice_type_other" placeholder="Please specify" class="required_input" style="margin-top: 10px;">
 							
 							<p class="privacy-policy hideThis3">By providing your information on this form and submitting it you are consenting 
 							to receive marketing communications about products and services and if you have 
@@ -173,16 +178,16 @@
 						</div>
 						<div class="col">
 							<p>Last Name</p>
-							<input type="text" name="lastname" id="last_name" placeholder="">
+							<input type="text" name="lastname" id="last_name" tabindex="2" placeholder="">
 							
 							<p>Office Phone Number</p>
-							<input type="text" name="Office_Phone_Number" id="office_phone_number" placeholder="">
+							<input type="text" name="Office_Phone_Number" id="office_phone_number" tabindex="4" placeholder="">
 							
-							<p>Practice Zip Code<span class="required">*</span></p>
-							<input type="text" name="Practice_Zip_Code" id="practice_zip_code" placeholder="">
+							<p>Practice Zip Code<span class="required"> <span class="requiredMessage">Required</span> *</span></p>
+							<input type="text" name="Practice_Zip_Code" id="practice_zip_code" class="required_input" tabindex="6" placeholder="">
 							
 							<p>Referred By</p>
-							<input type="text" name="Referred_By" id="referred_by" placeholder="">
+							<input type="text" name="Referred_By" id="referred_by" tabindex="8" placeholder="">
 							
 							<div class="button submit">
 								<p>SUBMIT</p>
@@ -194,6 +199,12 @@
 							and to our use of your information in accordance with our <a href="#">Privacy Policy</a>.</p>
 						</div>
 					</form>
+				</div>
+				
+				<div class="col-2 col tyContent">
+					<div>
+						<img src="images/thank-you.gif" width="100%">
+					</div>
 				</div>
 			</div>
 			
@@ -333,6 +344,27 @@
 				var office_phone_number = document.getElementById('office_phone_number').value;
 				var practice_zip_code = document.getElementById('practice_zip_code').value;
 				var referred_by = document.getElementById('referred_by').value;
+				
+				if( fname === "" || email === "" || practiceName === "" || practice_type === "" || practice_zip_code === "" ) {
+					alert('Please enter all required fields');
+					$('.requiredMessage').css('display', 'inline-block');
+					$('.required_input').css('border', '2px solid red');
+				} else {
+					$.post('https://hooks.zapier.com/hooks/catch/10167124/b5btdn5/',   // url
+				   {
+						"firstname":fname,
+						"email":email,
+						"PracticeName":practiceName,
+						"PracticeZip":practice_zip_code,
+						"PracticeType":practice_type
+					}, // data to be submit
+				   function(data, status, jqXHR) {// success callback
+							alert('post was successful!');
+							$('.formContent').css('display', 'none');
+							$('.tyContent').css('display', 'inline-block');
+					});
+				}
+				
 			});
 
 			

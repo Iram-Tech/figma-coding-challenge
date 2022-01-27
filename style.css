@@ -45,6 +45,11 @@ h1 {
 	background-color: #fff;
 }
 
+.requiredMessage {
+	display: none;
+}
+
+
 #line-one {
 	transform: rotate(0deg);
 	margin-bottom: 10px;
@@ -168,6 +173,10 @@ header ul a {
 	 width: 100%;
 	 background-color: #fff;
 	 height: 32px;
+ }
+ 
+ #tyContent {
+	 display: none;
  }
  
  /* ***** ***** ***** *****
@@ -397,4 +406,8 @@ header ul a {
 	.social-icons {
 		text-align: right;
 	}
+}
+
+.tyContent {
+	display: none;
 }
